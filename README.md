@@ -1,6 +1,6 @@
 # Motion Primitives Based Kinodynamic RRT
 
-This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to the report folder.
+This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to the report folder. This implemetation is on a real autonomous vehicle and so most of the code will not work without the vehicle hardware interface.
 
 
 ## Examples
@@ -20,18 +20,23 @@ This package is the implementation of our work, "Motion Primitives Based Kinodyn
 </p>
 
 ### Preliminaries
-Coordinate system used with X along car heading,Y along the left of car, and theta (yaw) is positive counter-clocwise. Basically, if you steer left you will see positive Y and positive yaw. X, Y are in metres and theta in radians.
+Coordinate system used with X along car heading,Y along the left of car, and theta (yaw) is positive counter-clockwise. Basically, if you steer left you will see positive Y and positive yaw. X, Y are in metres and theta in radians.
 
-The car intial states (from where hector slam is intialized) is fixed global frame of reference.
+The car intial states is fixed global frame of reference.
+
+### 2.1 [ROS](http://wiki.ros.org/)
+
+### 2.2 [HECTOR SLAM](http://wiki.ros.org/hector_slam)
+
+### 2.3 [PACMOD](http://wiki.ros.org/pacmod)
 
 
 ### Setup
 
-* Copy the folder 'CS588_project_final' to the desired workspace (it will be better if copied to `~/workspaces/group_11_ws`)
+* Copy the folder 'project_code' to the desired workspace
 
-* (IF workspace not `~/workspaces/group_11_ws`) Install Hector SLAM following instructions on assignment 3 README
 
-* Open 3 seperate terminals with each cd to `~/workspaces/group_11_ws/CS588_project_final/launch_files_for sensor_slam_pacmod`  (Advised to use Terminator application)
+* Open 3 seperate terminals with each cd to `~/workspace/project_code/launch_files_sensor_slam_pacmod`  (Advised to use Terminator application)
 
 * `bash sensor_init.sh` on terminal 1
 ` bash hector_slam_init.sh` on terminal 2
@@ -42,8 +47,8 @@ The car intial states (from where hector slam is intialized) is fixed global fra
 * If all above steps are completed. You will see a RVIZ window with localization and mapping from HECTOR SLAM. You may be able to control the steering by joystick.
 
 
-### Running visualization for offline created plans
-A few offline created trajectories for parallel, perpendicular, and taking the vehicle out from highbay are avaialble.
+### Running visualization for offline created plans [Can be done without vehicle interface]
+A few offline created trajectories for parallel, perpendicular, and reverse navigation are avaialble.
 
 * Open the python file `tracking3.py` in a text editor. Naviagate to main function and uncomment either line 285 or line 286. This is for obstacles  visualization. Since, virtual/ simulated obstactes are used to create these plans.
  Ex. Line 286 ` car1 = Car(-2, 2.5, 4, 2.5, 0)	; car2 = Car(8, 2.5, 4, 2.5, 0)   # Parallel parking`
@@ -61,13 +66,12 @@ By default line 288 will be uncommented. This is to ensure the immediate visuliz
 
 * Open new terminal
 ```bash 
-cd ~/workspaces/group_11_ws/CS588_project_final
+cd ~//workspace/project_code
 source ~/demo_ws/devel/setup.bash ##### path to demo workspace 
 python3 tracking3.py         
 ```
 
 * You will see a trajectory plot with obstacles, vehicle initial state, and final state. Marker '*' is also shown which is live position of the vehicle. It will be randomly initialized. After you complete the next section, this GRAPH will track the SLAM localization.
-
 ### Running the vehicle with the available plans
 
 * Open the python file `SLAM_pp_tracker_pid.py` in a text editor. Uncomment only one line from 128-134: 
@@ -82,9 +86,9 @@ python3 tracking3.py
 NOTE THE FOLLOWING CODE WILL START MOVING THE VEHICLE AUTONOMOUSLY
 * Open new terminal
 ```bash 
-cd ~/workspaces/group_11_ws/CS588_project_final
+cd ~/workspaces/project_code
 source ~/demo_ws/devel/setup.bash ##### path to demo workspace 
-python3 SLAM_pp_tracker_pid.py        
+python3 SLAM_pp_tracker_pid.py      
 ```
 
 ### Creating your own plans with the created kinodynamic RRT planner (virtual obstacles)
