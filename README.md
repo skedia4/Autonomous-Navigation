@@ -1,22 +1,22 @@
-#Motion Primitives Based Kinodynamic RRT
+# Motion Primitives Based Kinodynamic RRT
 
-This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022] (https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to reports folder.
+This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to reports folder.
 
 
 ## Examples
 ### 1.1 Reverse Navigation
 <p align='center'>
-<img width="100%" src="/figures/reverse_navigation.gif"/>
+<img width="50%" src="/figures/reverse_navigation.gif"/>
 </p>
 
 ### 1.2 Parallel Parking
 <p align='center'>
-<img width="100%" src="/figures/parallel_parking.gif"/>
+<img width="50%" src="/figures/parallel_parking.gif"/>
 </p>
 
 ### 1.3 Perpendicular Parking
 <p align='center'>
-<img width="100%" src="/figures/perpendicular_parking.gif"/>
+<img width="50%" src="/figures/perpendicular_parking.gif"/>
 </p>
 
 ### Preliminaries
