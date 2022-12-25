@@ -1,6 +1,6 @@
 # Motion Primitives Based Kinodynamic RRT
 
-This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to the report folder. This implemetation is on a real autonomous vehicle and so most of the code will not work without the vehicle hardware interface.
+This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description, read our work at conference website or browse to the report folder. This implemetation is on a real autonomous vehicle and so **most of the code will not work without the vehicle hardware interface.**
 
 
 ## Examples
@@ -47,7 +47,7 @@ The car intial states is fixed global frame of reference.
 * If all above steps are completed. You will see a RVIZ window with localization and mapping from HECTOR SLAM. You may be able to control the steering by joystick.
 
 
-### Running visualization for offline created plans [Can be done without vehicle interface]
+### Running visualization for offline created plans ***[can be done without vehicle interface]***
 A few offline created trajectories for parallel, perpendicular, and reverse navigation are avaialble.
 
 * Open the python file `tracking3.py` in a text editor. Naviagate to main function and uncomment either line 285 or line 286. This is for obstacles  visualization. Since, virtual/ simulated obstactes are used to create these plans.
@@ -124,19 +124,19 @@ python3 SLAM_pp_tracker_pid.py
 
 Most the local dependencies are stored in the project folder. Few Python packages which may be required (if not already installed):
 
-matplotlib.pyplot
-numpy
-pickle
-rospy
-sys
-random
-shapely
-regex
-scipy
-os
-CSV
-std_msgs.msg
-geometry_msgs.msg
-tf.transformations
-pacmod_msgs.msg
+* matplotlib.pyplot
+* numpy
+* pickle
+* rospy
+* sys
+* random
+* shapely
+* regex
+* scipy
+* os
+* CSV
+* std_msgs.msg
+* geometry_msgs.msg
+* tf.transformations
+* pacmod_msgs.msg
 
