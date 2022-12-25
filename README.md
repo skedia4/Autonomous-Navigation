@@ -1,6 +1,4 @@
-### Written By
-Shubham Kedia
-skedia4@illinois.edu
+
 
 ### Preliminaries
 Coordinate system used with X along car heading,Y along the left of car, and theta (yaw) is positive counter-clocwise. Basically, if you steer left you will see positive Y and positive yaw. X, Y are in metres and theta in radians.
