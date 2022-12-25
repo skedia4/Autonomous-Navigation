@@ -1,6 +1,6 @@
 # Motion Primitives Based Kinodynamic RRT
 
-This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to reports folder.
+This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022](https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to report folder.
 
 
 ## Examples
