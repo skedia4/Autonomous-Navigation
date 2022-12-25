@@ -1,4 +1,23 @@
+#Motion Primitives Based Kinodynamic RRT
 
+This package is the implementation of our work, "Motion Primitives Based Kinodynamic RRT for Autonomous Vehicle Navigation in Complex Environments", presented at IROS, [BADUE 2022] (https://gamma.umd.edu/workshops/badue22/). For a detailed description read our work at conference website or browse to reports folder.
+
+
+## Examples
+### 1.1 Reverse Navigation
+<p align='center'>
+<img width="100%" src="/figures/reverse_navigation.gif"/>
+</p>
+
+### 1.2 Parallel Parking
+<p align='center'>
+<img width="100%" src="/figures/parallel_parking.gif"/>
+</p>
+
+### 1.3 Perpendicular Parking
+<p align='center'>
+<img width="100%" src="/figures/perpendicular_parking.gif"/>
+</p>
 
 ### Preliminaries
 Coordinate system used with X along car heading,Y along the left of car, and theta (yaw) is positive counter-clocwise. Basically, if you steer left you will see positive Y and positive yaw. X, Y are in metres and theta in radians.
